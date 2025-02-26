@@ -1,0 +1,96 @@
+.background-section {
+  background: url('/bioskop bg.jpg') no-repeat center center/cover; 
+  position: relative;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  /* min-height: 100vh;  */
+  padding: 50px 150px;
+}
+
+.background-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
+}
+
+.background-section * {
+  position: relative;
+  z-index: 2;
+}
+
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 40px; 
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  justify-content: center;
+  margin-top: 2700px;
+}
+
+.movie-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.movie-item img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.movie-item img:hover {
+  transform: scale(1.08);
+}
+
+
+.movie-item h2 {
+  font-size: 1.4em;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+.movie-item p {
+  font-size: 1em;
+  color: #ddd;
+}
+
+
+@media (max-width: 768px) {
+  .background-section {
+      padding: 30px 10px;
+  }
+
+  .movie-list {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+  }
+
+  .movie-item {
+      padding: 10px;
+  }
+}
