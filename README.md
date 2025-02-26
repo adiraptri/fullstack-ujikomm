@@ -8,6 +8,7 @@ di project ini ada 8 table yang isinya ada :
 5. Genre
 6. Bioskop
 7. Kursi
+8. Pembayaran
 
 admin bisa menambahkan, mengedit, menghapus kursi dan tiket yang telah dipesan, admin juga bisa melihat list tiket dan dan jumlah kursi yang telah di isi
 
